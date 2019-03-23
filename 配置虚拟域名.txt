@@ -1,0 +1,22 @@
+1.配置本地路由表
+	C:\Windows\System32\drivers\etc\hosts
+	127.0.0.1	shop.cn
+
+2.apache开启虚拟主机
+	D:\xampp\apache\conf\httpd.config
+	# Virtual hosts
+	#Include conf/extra/httpd-vhosts.conf
+	去除#号
+
+3.修改虚拟主机配置
+	D:\xampp\apache\conf\extra\httpd-vhosts.conf
+	<VirtualHost *:80>添加此段防止失效
+    		DocumentRoot "D:\xampp\htdocs"
+    		ServerName localhost
+	</VirtualHost>
+	<VirtualHost *:80>
+    		DocumentRoot "D:\xampp\htdocs\shop\public"
+    		ServerName tpshop.cn
+	</VirtualHost>
+	
+4.重启apache

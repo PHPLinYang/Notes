@@ -1,0 +1,11 @@
+序列化（串行化）：将变量转换可保存或传输的字符串的过程
+	1.serialize()当数组包含双引号或单引号或冒号会出现问题，需要使用base64_encode()包含它
+	2.json_encode()
+	3.var_export()
+	4.wddx_serialize_value
+	
+反序列化（反串行化）：把这个字符串再转化成原来的变量的过程
+	1.unserialize()，使用base64_decode()包含它
+	2.json_decode()
+	3.eval()
+	4.wddx_deserialize()

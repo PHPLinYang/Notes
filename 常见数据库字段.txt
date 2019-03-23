@@ -1,0 +1,85 @@
+轮播图套件：slide
+	id：int11
+	status:tin1,1显示，0不显示
+	delete_time:int10
+	name：var50
+	remark:var255
+轮播图图片：slide_item
+	id:int11
+	slide_id:int11
+	status:tin1,1显示,0不显示
+	list_order：int11
+	title：var50
+	image:var100
+	url:var255
+	target:var10,_blank,_parent
+	description:var255
+	content:text
+	more:text
+导航套件：nav
+	id:int11
+	is_main:tin1
+	name:var30
+	reamrk:var255
+
+导航菜单：nav_menu
+	id:int11
+	nav_id:int11
+	parent_id:int11
+	status:tin1
+	list_order:int11
+	name:var50
+	target:var10
+	href:var255
+	icon:var100
+
+分类：category
+	
+友情链接：link
+	id:big20
+	status:tin1,1,0
+	list_order:int11
+	description:var255
+	url:var255
+	name:var30
+	image:var100
+	target:var10
+文章：article
+	id
+	cate_id
+	post_type:tin1,1文章，2页面
+	user_id
+	status:tin1
+	comment_status:tin1是否可以评论
+	is_top:tin1是否置顶
+	recommended:tin1是否推荐
+	post_hits:查看数
+	post_favorites：收藏数
+	like_count:点赞数
+	dislike_count:不喜欢数
+	commend_count评论数
+	thumbnail:缩略图
+	title
+	author
+	keywords
+	excerpt摘要
+	source来源
+	content
+	
+	
+评论：comment
+	id
+	parent_id
+	user_id
+	to_user_id
+	like_count:点赞数
+	dislike_count:不喜欢数
+	create_time:
+	delete_time:
+	status:tin1
+
+	
+	
+
+	
+	

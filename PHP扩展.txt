@@ -1,0 +1,26 @@
+1.查看PHP扩展
+	1)phpinfo()探针
+	2)get_loaded_extensions()函数
+	3)extension_loaded()函数
+
+2.PHP扩展目录
+	php.ini中查看extension_dir
+
+3.Window下安装PHP扩展php_xxx.dll
+	1）下载扩展 
+		PECL扩展库仓库pecl.php.net
+		windows.php.net/downloads/pecl/releases/
+	2）安装流程
+		选择版本PHP VC nts/ts 
+		解压到对应目录
+		开启扩展php.ini中新增extension=""
+		重启服务器
+
+4.Linux下安装PHP扩展
+	.so文件
+	1、下载http://pecl.php.net	
+	2、选择版本依赖关系，关注php版本就可以
+	3、解压下载文件
+	4、判断安装类型：直装、编译安装
+		phpize是用来扩展php扩展模块的
+		配置编译参数

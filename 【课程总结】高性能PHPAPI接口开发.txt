@@ -1,0 +1,55 @@
+1.REST面向资源,SOAP面向消息,RPC面向方法区别
+2.表引擎MyISAM/InnoDB区别
+3.用户接口实现
+	PHP实现对MySQL的增删改查
+	实现注册、登录验证函数
+	简单封装返回JSON数据
+	json_encode(array['status'=>0,'message'=>"",'data'=>[]])
+4.文章类接口实现
+	数据库设计：分类表、文章表
+		status字段：1发布0待审-1编辑
+	PHP实现增删改查
+	实现分类页功能limit
+5.发送邮件API,PHPMailer
+	Composer安装
+	开启smtp服务
+	收集邮件发出去结果
+6.短信SMS发送
+	选择短信服务提供商
+	短信发送状态记录
+7.IP地址查询API（定位，区域统计，小流量上线功能，黑白名单）
+	ipip 网站
+	filter_var()方法
+8.向APP Push消息API
+	选择推送服务商，小米推送
+9.微信支付API
+10.API自测脚本
+	创建aitest文件夹
+	curl方法，composer下载
+11.API公共Lib抽离（封装公共部分，SDK统一管理，Common/lib）
+12.DAO数据操作层（数据库类层抽离DB_Base）	
+13.异常处理(错误信息字典，异常处理)
+	status状态码
+	message信息字典统一管理
+14.权限校验抽离
+	Base.php基类控制器初始化验证，需要验证的控制器继承此基类
+
+15.API文章自动生成（phpDocument）
+16.API接口性能信息收集
+17.API接口性能时间开销定位分析，xhprof工具
+18.API接口性能上下游性能优化
+19.API服务稳定性SLA
+
+*DB事务操作
+	例如：创建订单同时减少货物库存
+	PDO操作
+	try{
+		beginTransaction();开启一个事务
+		SQL操作新增订单insert、减少库存update
+	}catech(PDOException $e){
+		//$e->getMessage();
+		rollback();回滚,两条SQL同时成功才行
+	}
+	
+	
+

@@ -1,0 +1,72 @@
+1.Windows安装redis 3.2.100
+	下载地址：https://github.com/MicrosoftArchive/redis/releases
+
+2.开机自启redis服务
+	cmd切换到redis安装目录
+	运行redis-server redis.windows.conf
+
+3.查看资源管理器是否有redis服务
+
+4.检测是否安装成功
+	另打开一个cmd切换到redis安装目录
+	运行redis-cli.exe -h 127.0.0.1 -p 6379
+	出现127.0.0.1:6379>表示安装成功
+	设置键set name yanglin
+	获取get name 出现yanglin
+
+5.Redis配置设置
+	记事本运行redis.window.conf
+	设置主机名bind 127.0.0.1
+	设置端口号port 6379
+	设置内存maxmemory 1024000000
+	设置密码requirepass 123456
+
+6.安装Redis扩展库
+	下载https://windows.php.net/downloads/pecl/releases/
+	解压将php_redis.dll移动到D:\xampp\php\ext
+	进入php.ini配置文件新增extension=phpredis.dll
+	
+7.Redis数据类型
+	1）字符串string
+		set key value
+		get value
+		incr key自增1
+		incrby key inrement自增n
+		decr key自减1
+		decrby key increment自减n
+	2）哈希hash
+		hset key filed value将哈希表 key 中的字段 field 的值设为 value 
+		hmset key filed1 value1 [filed2 value2]
+		hget key filed获取存储在哈希表中指定字段的值。
+		hgetall key获取在哈希表中指定 key 的所有字段和值
+		hdel key filed1 [filed2]删除一个或多个哈希表字段
+		hexists key filed查看哈希表 key 中，指定的字段是否存在。
+		hincrby key filed increment为哈希表 key 中的指定字段的整数值加上增量increment 。
+		hkeys ke获取所有哈希表中的字段	
+	3）列表list
+		lpush key value1 [value2]
+		lpop key
+		rpush key value1 [value2]
+		rpop key
+		lindex key index通过索引获取列表中的元素
+		llen key获取列表长度
+		lrange key start stop获取列表指定范围内的元素
+	4）集合set
+		sadd key member1 [member2]
+		scard key获取集合的成员数
+		sdiff key1 [key2]差集
+		sinter key1 [key2]交集
+		sunion key1 [key2]并集
+		
+	5）有序集合zset
+
+8.PHP使用Redis
+	$redis=new Redis();
+	$redis->connect('127.0.0.1','6379');
+	$redis->set('name','yl');
+	$redis->get('name');
+	$redis->close();
+
+9.ThinkPHP使用Redis
+	
+	

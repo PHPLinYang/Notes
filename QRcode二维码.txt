@@ -1,0 +1,24 @@
+1.找扩展包
+	http://packagist.org
+	composer require phpqrcode/phpqrcode
+2.composer切换国内镜像
+	composer config -g repo.packagist composer https://packagist.phpcomposer.com
+3.安装qrcode
+	切换到tp框架目录，执行composer
+	下载到vendor文件夹里面
+4.在extend文件夹新建Qrcode类，引用QRcode
+	namespace qrcode;
+	class Qrcode{
+    		public static function createQrcode($content,$outfile=false,$level='L',$size='12',$margin='2',$saveandprint=false){
+        		\PHPQRCode\QRcode::png($content,$outfile,$level,$size,$margin,$saveandprint);
+    		}
+	}
+	参数：
+	 	$text内容:
+		$outfile:默认为否，不生成文件，只将二维码返回；否则需要给出存放生成二维码的图片路径
+		$level容错率:L(7%),M(15%),Q(25%),H(30%)
+		$size:尺寸
+		$margin:控制生成二维码的空白区域
+		$saveandprint
+5.在需要的地方引用Qrcode类的createQrcode（）方法	
+	
