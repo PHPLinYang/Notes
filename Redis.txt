@@ -1,5 +1,6 @@
 1.Windows安装redis 3.2.100
 	下载地址：https://github.com/MicrosoftArchive/redis/releases
+  Linux
 
 2.开机自启redis服务
 	cmd切换到redis安装目录
