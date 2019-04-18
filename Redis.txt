@@ -1,6 +1,20 @@
 1.Windows安装redis 3.2.100
 	下载地址：https://github.com/MicrosoftArchive/redis/releases
   Linux
+	yum install gcc tcl
+	ftp上传压缩文件到linux
+	tar -zxvf redis-***.tar.gz
+	cd redis-***
+	make编译
+	make install安装
+	修改配置文件redis.conf
+		daemonize yes
+		port 6379
+	redis-server redis.conf启动
+	redis-cli -h 127.0.0.1 -p 6379 连接reids，不可以远程连接
+		修改reids.conf将bind127.0.0.1加#注释
+		protected-mode no就可以远程连接
+	redis-server shutdown关闭重启
 
 2.开机自启redis服务
 	cmd切换到redis安装目录
@@ -32,9 +46,9 @@
 		set key value
 		get value
 		incr key自增1
-		incrby key inrement自增n
+		incrby key 自增n
 		decr key自减1
-		decrby key increment自减n
+		decrby key 自减n
 	2）哈希hash
 		hset key filed value将哈希表 key 中的字段 field 的值设为 value 
 		hmset key filed1 value1 [filed2 value2]
