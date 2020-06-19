@@ -1,0 +1,10 @@
+账号：淘宝账号
+AccessKey ID：LTAI4FrgxxVTkbe32UZ9WXTL
+Access Key Secret：jY3dpM9fp1yypEinbjmEkKSr9MZ1o8
+签名：汇利商行
+模版CODE：SMS_163851092
+
+1.安装PHP SDK
+	composer require alibabacloud/client
+2.OpenAPI Explorer来生成相关API的Demo
+3.TP封装发送验证码类
